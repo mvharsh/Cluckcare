@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CluckCare</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='ico.png') }}" type="image/png">
+  </head>
+  <body>
+    <header class="header">
+      {% include 'nav_bar.html' %}
+    </header>
+
+    <section id="home" class="home-section">
+      <div class="about-content">
+
+        <div class="img">
+          <img src="https://i.pinimg.com/originals/a5/d6/47/a5d6474ed3c49322617677fd1473f9a2.gif" alt="home image" />
+        </div>
+        <h1>🐥CLUCK CARE🐣</h1>
+        <br>
+        <p>🐔🐥🐓 CluckCare is a website harnessing the power of deep learning convolutional neural networks (CNN-VGG) to predict chicken diseases from uploaded images of their excretions. Our simple yet effective approach aims to assist poultry farmers and veterinarians in promptly identifying potential health issues🐔🐥🐓.</p>
+        <button class="try-now-button" onclick="window.location.href='/predict'">Try Now</button>
+      </div>
+    
+    </section>
+
+    <section id="about" class="home-section">
+      <div class="about-content">
+     
+        <h1>🐥The reason behind creating CluckCare🐥</h1>
+        <br>
+        <p>Raising chickens 🐔 is not just about producing eggs 🥚 or meat; it's about ensuring their health and well-being 🐥. However, identifying diseases 🦠 in chickens can be challenging, especially for novice farmers 🌾. With CluckCare, we aim to bridge this gap 🌉 by leveraging the power of deep learning convolutional neural networks (CNN-VGG) 🧠. By analyzing images of chicken excretions 📸, our platform can swiftly detect potential health issues 🚨, empowering farmers and veterinarians alike 🌱. Early detection means prompt intervention, ultimately safeguarding the health and productivity of poultry flocks 🐥👩‍⚕️. CluckCare strives to be a reliable ally in the poultry farming community 🐔💻.</p>
+        <br>
+      
+        <button class="try-now-button" onclick="window.location.href='/predict'">Try Now</button>
+      </div>
+  
+    </section>
+
+
+    <section id="team" class="home-section">
+      <div class="team-container">
+        <h1>Meet the Team</h1>
+        <br>
+        <br>
+        <div class="team-member">
+          <div class="profile-pic">
+            <img src="{{ url_for('static', filename='senthil.jpg') }}" alt="Senthil Shunmugam">
+          </div>
+          <div class="member-details">
+            <h2>Senthil Shunmugam K</h2>
+            <p>✉️Email: <a  href="mailto:senthilshunmugam2003@gmail.com">senthilshunmugam2003@gmail.com</a> </p>
+            <p>📎LinkedIn: <a href="https://www.linkedin.com/in/senthil-shunmugam-b85071268/">Senthil Shunmugam</a></p>
+            <p>💻Role: 📈DL-Model Developer 🧑🏻‍💻Back-End Developer 🛠Deployment</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="profile-pic">
+            <img src="{{ url_for('static', filename='harshini.jpg') }}" alt="Harshini V">
+          </div>
+          <div class="member-details">
+            <h2>Harshini V </h2>
+            <p>✉️Email: <a href="mailto:harshinivivekm@gmail.com">harshinivivekm@gmail.com</a> </p>
+            <p>📎LinkedIn: <a href="https://www.linkedin.com/in/harshini-vivek/">Harshini V</a></p>
+            <p>💻Role: 🖱Front-End Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+  </body>
+</html>

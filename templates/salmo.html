@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CluckCare</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='ico.png') }}" type="image/png">
+</head>
+<body>
+  <header class="header">
+    {% include 'nav_bar.html' %}
+  </header>
+
+  <section class="dis-section">
+    <div>
+      <div class="img">
+        <img src="https://media.tenor.com/w-KGQo465GQAAAAi/canticos-nicky.gif" alt="image" />
+      </div>
+      <h2>🚨 Salmonella Alert! Protect Your Feathered Friend 🚨</h2>
+      <br>
+      <div>
+        <p>Ever heard of salmonella? It's a nasty bacteria that can give your chicken a tummy ache. It lives in some foods and can make them feel yucky.</p>
+        <br>
+        <p><b>Signs your chicken might have salmonella:</b></p>
+        <br>
+        
+          <li>🐣 <b>Poopy problems:</b> Look for diarrhea, which is watery poop that's not a good sign.</li>
+          <li>🐣 <b>Sleepy chicken?</b> Lethargy means your chicken has low energy and might not feel like playing.</li>
+          <li>🐣 <b>Picky eater?</b> Loss of appetite can be a symptom of salmonella.</li>
+          <li>🐣 <b>Dehydration danger:</b> If your chicken isn't drinking, they could get dehydrated, which is serious.</li>
+        
+        <br>
+        <p><b>Don't worry, we can help prevent salmonella! Here's how to keep your chicken healthy:</b></p>
+        <br>
+        
+          <li>🐣 <b>Cleanliness is key:</b> Regularly clean and disinfect their coop, food bowls, and water dishes to keep germs away.</li>
+          <li>🐣 <b>Healthy food, happy chicken:</b> Give them food that's safe and free of salmonella.</li>
+          <li>🐣 <b>Wash your hands!</b> Wash your hands well after handling your chicken to stop the spread of bacteria.</li>
+       
+      </div>
+    </div>
+  
+    
+  
+  </section>
+</body>
+</html>

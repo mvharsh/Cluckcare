@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CluckCare</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='ico.png') }}" type="image/png">
+</head>
+<body>
+  <header class="header">
+    {% include 'nav_bar.html' %}
+  </header>
+
+  <section class="dis-section">
+    <div>
+      <div class="img">
+        <img src="https://media.tenor.com/w-KGQo465GQAAAAi/canticos-nicky.gif" alt="image" />
+      </div>
+      <h2>🚨Uh Oh! Watch Out for Cocci!🚨</h2>
+      <br>
+      <div>
+        <p>Ever heard of a tiny critter called coccidia? It's a parasite that can give your chicken a hard time. These little guys live in a chicken's intestines and can cause some not-so-fun problems.</p>
+        <br>
+        <p><b>Signs your chicken might have cocci:</b></p> <br>
+        
+          <li>🐣 <b>Poopy problems:</b> Look for watery droppings, which can be a sign of diarrhea.</li>
+          <li>🐣 <b>Shrinking chickie:</b> Weight loss isn't good, so keep an eye on your chicken's weight.</li>
+          <li>🐣 <b>Puffy and grumpy?</b> A fluffed-up appearance can be a sign of discomfort.</li>
+          <li>🐣 <b>Bloody mess:</b> In severe cases, blood might be present in the droppings. Yikes!</li>
+        
+        <br>
+        <p><b>Don't worry, we can help prevent cocci! Here's how to keep your chicken healthy:</b></p><br>
+        
+          <li>🐣 <b>Cleanliness is key:</b> Regularly clean and disinfect their coop to keep those parasites away.</li>
+          <li>🐣 <b>Superfood power:</b> Give your chicken a balanced diet with all the good stuff to boost their immune system.</li>
+          <li>🐣 <b>Isolating the icky:</b> If a chicken gets sick, separate them to stop the cocci from spreading to their friends.</li>
+        
+      </div>
+    </div>
+  
+   
+  
+  </section>
+  
+</body>
+</html>
