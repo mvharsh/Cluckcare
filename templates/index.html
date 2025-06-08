@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CluckCare</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='ico.png') }}" type="image/png">
+  </head>
+  <body>
+    <header class="header">
+      {% include 'nav_bar.html' %}
+    </header>
+
+    <section class="home-section">
+      <div class="home">
+       
+        <div class="img">
+          <img src="https://i.pinimg.com/originals/a5/d6/47/a5d6474ed3c49322617677fd1473f9a2.gif" alt="home image" />
+        </div>
+        <h3>
+          🐥Upload an image of your chicken's droppings and click Predict to diagonize your Chicken.🐥
+        </h3>
+		
+        <form action="/predict" method="post" enctype="multipart/form-data" class="mt-3" id="uploadForm">
+          <div class="file-upload" id="fileUpload">
+              <label for="file" class="file-label">
+                  <input type="file" name="file" id="file" class="file-input">
+                  <span class="file-cta">
+                      <span class="file-icon">
+                          <i class="fas fa-cloud-upload-alt"></i>
+                      </span>
+                      <span class="file-text">Drag & Drop or Click to Upload</span>
+                  </span>
+              </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Predict</button>
+      </form>
+      
+      
+     </div>
+    </section>
+
+  </body>
+
+  <script>
+const fileUpload = document.getElementById('fileUpload');
+const fileInput = document.getElementById('file');
+const fileText = document.querySelector('.file-text');
+const uploadForm = document.getElementById('uploadForm');
+
+uploadForm.addEventListener('submit', function(event) {
+    if (!fileInput.files || fileInput.files.length === 0) {
+        event.preventDefault(); // Prevent form submission
+        alert('Please upload a file before going further.'); // Show alert message
+    }
+});
+fileUpload.addEventListener('dragover', function(event) {
+    event.preventDefault();
+    fileUpload.classList.add('dragover');
+});
+
+fileUpload.addEventListener('dragleave', function(event) {
+    event.preventDefault();
+    fileUpload.classList.remove('dragover');
+});
+
+fileUpload.addEventListener('drop', function(event) {
+    event.preventDefault();
+    fileUpload.classList.remove('dragover');
+    const files = event.dataTransfer.files;
+    handleFiles(files);
+    removeDragDropText(); // Remove drag and drop text after uploading
+});
+
+function handleFiles(files) {
+    const fileInput = document.getElementById('file');
+    fileInput.files = files;
+    fileUpload.style.display = 'none'; // Hide the drag and drop div after uploading
+}
+
+fileInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        fileUpload.style.backgroundImage = `url(${e.target.result})`;
+        fileUpload.style.borderStyle = 'none';
+    };
+    reader.readAsDataURL(file);
+    removeDragDropText(); // Remove drag and drop text after uploading
+});
+
+function removeDragDropText() {
+    fileText.innerHTML = ''; // Set inner HTML to empty string to remove drag and drop text
+}
+
+
+  </script>
+</html>
