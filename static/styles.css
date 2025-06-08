@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+html {
+            scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to top, #fdf200 35%, #ffffff 75%);
+}
+
+.info-section {
+  background-color: #f8f9fa; 
+  height: 100vh;
+  background: linear-gradient(to top, #fdf200 35%, #ffffff 75%);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.navbar .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #0d0d0d;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #070707;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+  color: #084b8d;
+}
+
+.navbar .buttons a {
+  text-decoration: none;
+  color: #070707;
+  font-size: 1rem;
+  padding: 15px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons a:not(:last-child) {
+  margin-right: 30px;
+}
+
+.navbar .buttons .signin:hover {
+  color: #084b8d;
+}
+
+.navbar .buttons .signup {
+  border: 1px solid #070707;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons .signup:hover {
+  background-color: #084b8d;
+  color: #070707;
+}
+
+
+
+.home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #070707;
+}
+.img img {
+  display: block; /* Ensure the image is a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 100%; /* Ensure the image does not exceed the width of its container */
+}
+
+.home-section .img img {
+  width: 200px;
+}
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 15px;
+  margin: 20 auto;
+  text-align: center;
+}
+.dis-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  padding: 0 15px;
+  margin: 20 auto;
+  text-align: center;
+  font-size: 2vh;
+  padding-top: 20vh;
+  background: linear-gradient(to top, #fdf200 35%, #ffffff 75%);
+
+}
+.dis-section .img img {
+  width: 20vh;
+}
+
+
+.home-section .home {
+  max-width: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #070707;
+}
+
+
+.home-section .buttons {
+  margin-top: 40px;
+}
+
+.home-section .buttons a {
+  text-decoration: none;
+  color: #070707;
+  padding: 12px 24px;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.home-section .buttons a:not(:last-child) {
+  margin-right: 15px;
+}
+.home-section .buttons .learn {
+  border: 1px solid #070707;
+  border-radius: 0.375rem;
+}
+
+.home-section .buttons a:hover {
+  background-color: #01f9b3;
+}
+
+.buttons .join {
+  background-color: #a5f4e2;
+}
+
+
+
+/* Hamburger menu styles */
+#menu-toggle {
+  display: none;
+}
+
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #070707;
+  cursor: pointer;
+  display: none;
+  order: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #f9f8bb;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  .header .buttons {
+    display: none;
+  }
+
+  .home-section .home {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home-section img {
+    display: block;
+  }
+}
+
+
+
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+
+.info-section h2 {
+  color: #ff7f50;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.info-section p {
+  color: #333;
+  font-size: 18px;
+}
+
+.info-section .signs,
+.info-section .prevention {
+  margin-bottom: 30px;
+}
+
+.info-section h3 {
+  color: #ff7f50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-section ul {
+  list-style-type: none;
+}
+
+.info-section ul li {
+  margin-bottom: 10px;
+}
+
+.info-section ul li strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .info-section h2,
+  .info-section h3 {
+    font-size: 24px;
+  }
+}
+
+
+.about-content {
+
+  text-align: center;
+  font-size: 1.2rem;
+
+}
+
+.about-content .img {
+  margin: 20 auto;
+  max-width: 100%;
+}
+
+.about-content .img img {
+  display: block;
+  margin: 20 auto;
+  max-width: 100%;
+}
+
+.try-now-button {
+  background-color: #2ea100;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/*Upload File*/
+.file-upload {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-size: contain; /* Ensure the background image fits within the container */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center;
+  width: 200px; /* Adjust the width to create a square */
+  height: 200px; /* Set the height equal to width to create a square */
+  overflow: hidden; /* Ensure the image fits within the square */
+  margin: 0 auto; /* Center the drag and drop area horizontally */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.file-upload.dragover {
+  border-color: #aaa;
+}
+
+.file-label {
+  display: inline-block;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-cta {
+  display: inline-block;
+}
+
+.file-icon {
+  margin-right: 10px;
+}
+
+.file-text {
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+
+
+/* Style for the "Predict" button */
+.btn-primary {
+  background-color: #0de0af;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #00be85;
+}
+
+.button-home {
+  background-color: #0de0af;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-home:hover {
+  background-color: #00be85;
+}
+
+/*Team Deets*/
+/* Styles for profile pictures */
+.profile-pic {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 20%; /* Adjust size as needed */
+  height: 20%; /* Adjust size as needed */
+  margin: 5px;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Styles for team members */
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* White with opacity */
+}
+
+/* Styles for member details */
+.member-details {
+  flex-grow: 1;
+}
+
+/* Styles for headings */
+h1, h2 {
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles for links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Hover effect for links */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Reduce font size of member details */
+.member-details p {
+  font-size: 14px; /* Adjust font size as needed */
+}
+
